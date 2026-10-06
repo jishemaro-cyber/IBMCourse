@@ -1,227 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeanne Bovine | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="home">
-
-  <!-- Top Hero Profile Section (Left-aligned Layout) -->
-  <header class="profile-hero">
-    <div class="profile-container">
-      <img class="profile-img" src="profile.jpg" alt="Jeanne Bovine Profile Picture">
-      <div class="profile-text">
-        <!-- Profile name wrapper -->
-        <div class="profile_name">
-          <h1>Jeanne Bovine</h1>
-        </div>
-        <p class="profile-tagline">Self-motivated full stack developer to be.</p>
-      </div>
-    </div>
-  </header>
-
-  <!-- Sticky Navigation Bar -->
-  <nav class="main-nav topmenu">
-    <ul>
-      <!-- Requirement 7: <a href="#home"> inside an element with the iconbutton class -->
-      <li class="iconbutton">
-        <a href="#home" id="nav-home">Home</a>
-      </li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Project Details</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#recommendations">Recommendations</a></li>
-    </ul>
-  </nav>
-
-  <!-- Content Wrapper -->
-  <main class="content-wrapper">
-
-    <!-- About Me Section -->
-    <section id="about" class="portfolio-section">
-      <h2>About Me</h2>
-      <p>Hi, I'm Jeanne Bovine. I'm a passionate developer with a focus on web technologies and problem-solving. I enjoy creating innovative solutions and working with teams to deliver high-quality results.</p>
-    </section>
-
-<!-- Skills Section -->
-    <section id="skills" class="portfolio-section">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <!-- Skill 1: HTML -->
-        <div class="skill-card">
-          <div class="logo-wrapper">
-            <img src="htm5.png" alt="HTML5 Logo" class="skill-logo">
-          </div>
-          <div class="skill-info">
-            <h3>HTML5 Architecture</h3>
-            <p>Building semantic, accessible, and well-structured web foundations.</p>
-          </div>
-        </div>
-        <!-- Skill 2: JavaScript -->
-        <div class="skill-card">
-          <div class="logo-wrapper">
-            <img src="javascriptlogo.jpg" alt="JavaScript Logo" class="skill-logo">
-          </div>
-          <div class="skill-info">
-            <h3>JavaScript (ES6+)</h3>
-            <p>Developing interactive features, dynamic logic, and robust UI functionality.</p>
-          </div>
-        </div>
-        <!-- Skill 3: Requirement 4 - CSS3 with an image tag -->
-        <div class="skill-card">
-          <div class="logo-wrapper">
-            <img src="css3.jpg" alt="CSS3 Logo" class="skill-logo">
-          </div>
-          <div class="skill-info">
-            <h3>CSS3 & Fluid Layouts</h3>
-            <p>Crafting modern, fluid layouts using Flexbox, Grid, and animations.</p>
-          </div>
-        </div>
-        <!-- Skill 4: Requirement 4 - React with an image tag -->
-        <div class="skill-card">
-          <div class="logo-wrapper">
-            <img src="react.png" alt="React Logo" class="skill-logo">
-          </div>
-          <div class="skill-info">
-            <h3>React Framework</h3>
-            <p>Building modular, component-based single page web applications.</p>
-          </div>
-        </div>
-        <!-- Skill 5: UI/UX Prototyping -->
-        <div class="skill-card">
-          <div class="logo-wrapper">
-            <img src="Ui.PNG" alt="UI/UX Design Logo" class="skill-logo">
-          </div>
-          <div class="skill-info">
-            <h3>UI/UX Prototyping</h3>
-            <p>Designing intuitive, user-centered wireframes and visual identities.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Project Details Section -->
-    <section id="projects" class="portfolio-section">
-      <h2>Project Details</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Project 1</h3>
-          <p>Overview of project 1.</p>
-        </div>
-        <div class="project-card">
-          <h3>Project 2</h3>
-          <p>Overview of project 2.</p>
-        </div>
-        <div class="project-card">
-          <h3>Project 3</h3>
-          <p>Overview of project 3.</p>
-        </div>
-        <div class="project-card">
-          <h3>EcoTrack Mobile App</h3>
-          <p>A cross-platform mobile application that helps users monitor, calculate, and reduce their daily carbon footprint through gamified tasks.</p>
-        </div>
-        <div class="project-card">
-          <h3>Apex E-Commerce Engine</h3>
-          <p>A high-performance headless commerce API backend constructed with Node.js, featuring automated inventory syncing and secure Stripe integrations.</p>
-        </div>
-        <div class="project-card">
-          <h3>Quantum Analytics Dashboard</h3>
-          <p>A real-time data visualization interface built to map machine learning telemetry, streaming continuous server performance statistics seamlessly.</p>
-        </div>
-      </div>
-    </section>
-
-    
-
-    <!-- Recommendations Section -->
-    <section id="recommendations" class="portfolio-section">
-      <h2>Recommendations</h2>
-      
-      <!-- Requirement 6: Recommendations structured using that component class containing full text blocks -->
-      <div class="recommendations-container">
+<body>
+    <div class="calculator-container">
+        <h1>Simple Interest Calculator</h1>
+        <p class="subtitle">By jishemaro</p>
         
-        <div class="recommendation">
-          <div class="rec-meta">
-            <strong class="rec-author">Sarah Jenkins</strong>
-            <span class="rec-title">Director of Engineering @ Vortex Systems</span>
-            <small class="rec-relation">Supervised Jeanne directly</small>
-          </div>
-          <p class="rec-text">"Jeanne is a stellar engineer who completely revitalized our dashboard performance architecture. Her talent for breaking down complex problems and delivering optimized web solutions is unmatched."</p>
-          <span class="rec-date">Oct 14, 2025</span>
+        <form id="interestForm">
+            <!-- Principal Input -->
+            <div class="input-group">
+                <label for="principal">Principal Amount ($)</label>
+                <input type="number" id="principal" min="0" step="0.01" placeholder="e.g. 1000" required>
+            </div>
+
+            <!-- Interest Rate Input -->
+            <div class="input-group">
+                <label for="rate">Annual Interest Rate (%)</label>
+                <input type="number" id="rate" min="0" step="0.01" placeholder="e.g. 5" required>
+            </div>
+
+            <!-- Time Period Input -->
+            <div class="input-group">
+                <label for="time">Time Period</label>
+                <div class="time-input-container">
+                    <input type="number" id="time" min="0" step="0.1" placeholder="e.g. 2" required>
+                    <select id="timeUnit">
+                        <option value="years">Years</option>
+                        <option value="months">Months</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="button-group">
+                <button type="submit" class="btn-calculate">Calculate</button>
+                <button type="button" id="btnClear" class="btn-clear">Clear</button>
+            </div>
+        </form>
+
+        <!-- Dynamic Results Section -->
+        <div id="resultSection" class="results hidden">
+            <h3>Calculation Summary</h3>
+            <hr>
+            <div class="result-row">
+                <span>Initial Principal:</span>
+                <span id="resPrincipal">$0.00</span>
+            </div>
+            <div class="result-row">
+                <span>Total Interest:</span>
+                <span id="resInterest" class="highlight">$0.00</span>
+            </div>
+            <div class="result-row total">
+                <span>Final Balance:</span>
+                <span id="resTotal">$0.00</span>
+            </div>
         </div>
-
-        <div class="recommendation">
-          <div class="rec-meta">
-            <strong class="rec-author">Marcus Vance</strong>
-            <span class="rec-title">Principal Product Manager @ InnovateX Labs</span>
-            <small class="rec-relation">Worked on cross-functional teams</small>
-          </div>
-          <p class="rec-text">"Collaborating with Jeanne was a highlight of our multi-platform rewrite. She bridges the gap between technical requirements and user-centered design effortlessly, bringing immense value to any development cycle."</p>
-          <span class="rec-date">Jan 08, 2026</span>
-        </div>
-
-        <div class="recommendation">
-          <div class="rec-meta">
-            <strong class="rec-author">Elena Rostova</strong>
-            <span class="rec-title">Lead Technical Architect @ CloudScale Global</span>
-            <small class="rec-relation">Mentored Jeanne during tenure</small>
-          </div>
-          <p class="rec-text">"Jeanne writes incredibly clean, maintainable semantic HTML and scalable CSS systems. She treats accessibility and responsive web design as a top priority from day one, not as an afterthought."</p>
-          <span class="rec-date">May 22, 2026</span>
-        </div>
-
-      </div>
-      <div class="recommendation">
-          <div class="rec-meta">
-            <strong class="rec-author">Molisa</strong>
-            <span class="rec-title">Lead Technical Architect @ CloudScale Global</span>
-            <small class="rec-relation">Mentored Jeanne during tenure</small>
-          </div>
-          <p class="rec-text">"Jeanne writes incredibly clean, maintainable semantic HTML and scalable CSS systems. She treats accessibility and responsive web design as a top priority from day one, not as an afterthought."</p>
-          <span class="rec-date">May 27, 2026</span>
-        </div>
-
-      </div>
-      <div class="recommendation">
-          <div class="rec-meta">
-            <strong class="rec-author">Gakuba</strong>
-            <span class="rec-title">Lead Technical Architect @ CloudScale Global</span>
-            <small class="rec-relation">Mentored Jeanne during tenure</small>
-          </div>
-          <p class="rec-text">"Jeanne writes incredibly clean, maintainable semantic HTML and scalable CSS systems. She treats accessibility and responsive web design as a top priority from day one, not as an afterthought."</p>
-          <span class="rec-date">September 22, 2026</span>
-        </div>
-
-      </div>
-
-      <!-- Recommendation Form -->
-      <form id="recommendationForm" class="rec-form">
-        <h3>Submit a New Recommendation</h3>
-        <div class="form-row">
-          <input type="text" id="recommenderName" placeholder="Your Name" required>
-          <input type="text" id="recommenderTitle" placeholder="Title & Position" required>
-        </div>
-        <textarea id="recommendationText" placeholder="Your Endorsement Note..." required></textarea>
-        <button type="submit" class="submit-btn">Submit Recommendation</button>
-      </form>
-    </section>
-
-  </main>
-
-  <!-- Universal Action Success Popup -->
-  <div id="successPopup" class="popup-modal hidden">
-    <div class="popup-content">
-      <span class="popup-icon">🎉</span>
-      <h3>Submission Successful</h3>
-      <p>Thank you! Your recommendation has been submitted securely.</p>
-      <button id="closePopupBtn" class="close-btn">Dismiss</button>
     </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
