@@ -69,4 +69,4 @@ No server-side configuration, dependencies, or installations are required. To ru
 
 ## 📄 License
 
-This utility is distributed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as needed.
+This utility is distributed under the [Jishemaro License]. Feel free to use, modify, and distribute it as needed.
