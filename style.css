@@ -1,371 +1,168 @@
-/* ─── SYSTEM RESETS & VARIABLE CONFIGURATION ─── */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --success-color: #16a34a;
 }
 
-html {
-  scroll-behavior: smooth;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f8fafc;
-  color: #334155;
-  line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* ─── PROFILE HERO BANNER ─── */
-.profile-hero {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  color: #ffffff;
-  padding: 40px 30px;
+.calculator-container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 100%;
+    max-width: 450px;
 }
 
-.profile-container {
-  display: flex;
-  flex-direction: row;      /* Arranges elements side by side */
-  align-items: center;      /* Vertically aligns items in line */
-  justify-content: flex-start; /* Corrected: Forces everything to the top-left corner */
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0;
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 4px;
 }
 
-.profile-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #3b82f6;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 24px;
 }
 
-/* Requirement 1: Added .profile_name class with light color and appropriate font size */
-.profile_name {
-  color: #ffffff;
-  font-size: 2.5rem;
+.input-group {
+    margin-bottom: 20px;
 }
 
-.profile_name h1 {
-  font-size: inherit; 
-  color: inherit;      
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 4px;
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
-.profile-tagline {
-  font-size: 1.1rem;
-  color: #94a3b8;
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
 }
 
-/* ─── STICKY NAVIGATION BAR (topmenu) ─── */
-.topmenu {
-  position: sticky;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #e2e8f0;
-  z-index: 900;
-  padding: 0 30px;
+input:focus, select:focus {
+    border-color: var(--primary-color);
 }
 
-.topmenu ul {
-  display: flex;
-  justify-content: flex-start; /* Matches top-left look */
-  align-items: center;
-  list-style: none;
-  max-width: 1200px;
-  margin: 0;
+.time-input-container {
+    display: flex;
+    gap: 10px;
 }
 
-.topmenu a {
-  display: block;
-  padding: 18px 20px;
-  color: #64748b;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
+.time-input-container input {
+    flex: 2;
 }
 
-/* Requirement 7 Style Rule for iconbutton list holder container */
-.iconbutton a {
-  color: #3b82f6;
-  font-weight: 600;
+.time-input-container select {
+    flex: 1;
 }
 
-/* Requirement 2: Added exact .topmenu hover state rules with bold text and underline */
-.topmenu:hover {
-  font-weight: bold;
-  text-decoration: underline;
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
 }
 
-.topmenu a:hover {
-  color: #2563eb;
-  font-weight: bold;
-  text-decoration: underline;
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-/* ─── CONTENT WRAPPER LAYOUT ─── */
-.content-wrapper {
-  max-width: 1200px;
-  margin: 40px 0;
-  padding: 0 30px;
+.btn-calculate {
+    background-color: var(--primary-color);
+    color: white;
+    flex: 2;
 }
 
-.portfolio-section {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 16px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+.btn-calculate:hover {
+    background-color: var(--primary-hover);
 }
 
-.portfolio-section h2 {
-  font-size: 1.85rem;
-  color: #0f172a;
-  margin-bottom: 24px;
-  font-weight: 700;
-  border-bottom: 2px solid #f1f5f9;
-  padding-bottom: 12px;
+.btn-clear {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    flex: 1;
 }
 
-/* ─── ABOUT ME CUSTOM DETAILS ─── */
-#about p {
-  font-size: 1.125rem;
-  color: #475569;
-  line-height: 1.8;
+.btn-clear:hover {
+    background-color: #b91c1c;
+    color: white;
 }
 
-/* ─── PROJECT CARDS GRID LAYOUT ─── */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 15px;
+.results {
+    margin-top: 28px;
+    background-color: #f8fafc;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px dashed var(--border-color);
 }
 
-.project-card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.hidden {
+    display: none;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
+h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
 }
 
-.project-card h3 {
-  font-size: 1.25rem;
-  color: #0f172a;
-  margin-bottom: 12px;
-  font-weight: 600;
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin-bottom: 12px;
 }
 
-.project-card p {
-  font-size: 0.95rem;
-  color: #475569;
-  line-height: 1.6;
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 15px;
 }
 
-/* ─── SKILLS FLEX-GRID LAYOUT ─── */
-.skills-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.highlight {
+    color: var(--success-color);
+    font-weight: 600;
 }
 
-.skill-card {
-  display: flex;
-  align-items: center;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 16px 20px;
-}
-
-.logo-wrapper {
-  margin-right: 20px;
-  flex-shrink: 0;
-}
-
-.skill-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #f1f5f9;
-}
-
-.skill-info h3 {
-  font-size: 1.15rem;
-  color: #0f172a;
-  margin-bottom: 4px;
-}
-
-.skill-info p {
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-/* ─── NEW INDIVIDUAL RECOMMENDATION CARDS SYSTEM ─── */
-.recommendations-container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 30px;
-}
-
-/* Requirement 6 Class Customization rules */
-.recommendation {
-  background-color: #f8fafc;
-  border-left: 4px solid #3b82f6;
-  padding: 24px;
-  border-radius: 0 12px 12px 0;
-}
-
-.rec-meta {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 12px;
-}
-
-.rec-author {
-  font-size: 1.1rem;
-  color: #0f172a;
-}
-
-.rec-title {
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-.rec-relation {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  margin-top: 2px;
-}
-
-.rec-text {
-  font-style: italic;
-  color: #334155;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.rec-date {
-  display: block;
-  font-size: 0.8rem;
-  color: #94a3b8;
-  text-align: right;
-}
-
-/* ─── FORM BUILDER CUSTOMIZATION ─── */
-.rec-form {
-  margin-top: 40px;
-  padding: 30px;
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-}
-
-.rec-form h3 {
-  margin-bottom: 20px;
-  color: #0f172a;
-}
-
-.form-row {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.rec-form input, .rec-form textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 0.95rem;
-}
-
-.rec-form textarea {
-  height: 120px;
-  resize: vertical;
-  margin-bottom: 20px;
-}
-
-.submit-btn {
-  background-color: #3b82f6;
-  color: #ffffff;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* ─── NOTIFICATION POPUP MODAL ─── */
-.popup-modal.hidden {
-  display: none;
-}
-
-.popup-modal {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(4px);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popup-content {
-  background-color: #ffffff;
-  padding: 32px;
-  border-radius: 16px;
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-.popup-icon {
-  font-size: 3rem;
-  display: block;
-  margin-bottom: 16px;
-}
-
-.close-btn {
-  background-color: #f1f5f9;
-  color: #475569;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* ─── ADAPTIVE MEDIA VIEWPORTS ─── */
-@media (max-width: 768px) {
-  .profile-container {
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-  }
-  .form-row {
-    flex-direction: column;
-  }
+.total {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-color);
 }
