@@ -6,23 +6,16 @@ All contributions, bug reports, bug fixes, documentation improvements, enhanceme
 
 ---
 
-## 🛠️ How You Can Contribute
 
-### 1. Reporting Bugs
+## All contributions
+thanks for 15 contributions 
+## bug reports, 
+
 - Check the [http://contributing.mdcontributing.md/] to make sure the bug hasn't already been reported.
 - If it's a new issue, open a new bug report.
 - Clearly describe the issue, including steps to reproduce it and what you expected to happen instead.
-
-### 2. Suggesting Enhancements & Ideas
-- Have a great idea or feature request? Open an issue and label it as an `enhancement`.
-- Explain how your suggested feature works and why it would be valuable to the calculator.
-
-### 3. Improving Documentation
-- Documentation fixes (like typos, updating the README, or clarifying setup instructions) are highly valued.
-- Feel free to open a Pull Request directly for minor documentation updates.
-
-### 4. Code Contributions (Bug Fixes & Features)
-If you want to dive in and write some code:
+- 
+## bug fixes,
 1. **Fork** the repository to your own account.
 2. **Clone** your fork locally:
    ```bash
@@ -44,11 +37,18 @@ If you want to dive in and write some code:
 7. Open a **Pull Request** against the main repository.
 
 ---
+## documentation improvements,
+ Documentation fixes (like typos, updating the README, or clarifying setup instructions) are highly valued.
+- Feel free to open a Pull Request directly for minor documentation updates.
 
-## 📜 Ground Rules
+## enhancements, 
+rest ensured 
+## and ideas are welcome.
+Have a great idea or feature request? Open an issue and label it as an `enhancement`.
+- Explain how your suggested feature works and why it would be valuable to the calculator.
 
-- Please ensure your code follows basic standard formatting practices.
-- Be respectful and supportive of others in all your communication, adhering to our project's **Code of Conduct**.
+
+
 
 Thank you for helping make this calculator awesome!
 — **jishemaro**
